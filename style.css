@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+   /*  
+
+    * → Seletor universal que aplica as regras a todos os elementos da página.
+    margin: 0; → Remove as margens padrão de todos os elementos.
+    padding: 0; → Remove os preenchimentos padrão.
+    box-sizing: border-box; → Faz com que width e height incluam 
+    padding e border, evitando cálculos complicados de tamanho. 
+    
+    */
+
+  :root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-desktop.webp);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+  }
+
+  /*
+  
+  :root → Seletor que representa o elemento raiz (<html>), 
+  ideal para definir variáveis CSS.
+  As variáveis (--nome-da-variavel) permitem reutilizar cores, 
+  imagens e propriedades ao longo do código.
+  
+  */
+  
+  .light {
+    --text-color: black;
+    --bg-url: url(./assets/il_fullxfull.5766280557_eruu.webp);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/sun.svg);
+  }
+
+
+    /*
+    
+    Essa classe define as cores e imagens que serão usadas 
+    quando o tema claro (.light) estiver ativo.
+    
+    */
+
+  
+  body {
+    background: var(--bg-url) no-repeat top center/cover;
+  }
+
+  /*
+  
+    Define a imagem de fundo com:
+    no-repeat → Evita que a imagem se repita.
+    top center → Alinha a imagem no topo e no centro.
+    cover → Faz a imagem cobrir toda a área disponível.
+  
+  */
+  
+  body * {
+    font-family:  "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: var(--text-color);
+  }
+  
+  #container {
+    width: 360px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+  }
+
+
+    /*
+    Define uma largura fixa de 360px.
+    margin: 56px auto 0px; → Centraliza 
+    horizontalmente e aplica margem superior de 56px.
+    padding: 0 24px; → Adiciona um espaço interno 
+    (padding) de 24px nas laterais.
+    */
+  
+  /* profile */
+  #profile {
+    text-align: center;
+    padding: 24px;
+  }
+
+  /*
+    Centraliza o texto e adiciona 24px de espaçamento interno.
+  */
+  
+  #profile img {
+    width: 112px;
+  }
+
+  /*A imagem do perfil tem 112px de largura fixa.*/
+  
+  #profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+
+  /*O texto dentro do perfil tem:
+  font-weight: 500 → Deixa o texto com espessura média.
+  line-height: 24px → Altura da linha para melhorar a legibilidade.
+  margin-top: 8px → Cria um espaço acima do texto.*/
+
+  
+  /* switch */
+  #switch {
+    position: relative;
+    width: 64px;
+  
+    margin: 4px auto;
+  }
+
+  /*position: relative; → Permite posicionar elementos filhos de forma mais precisa.
+    width: 64px; → Define a largura do botão.
+    margin: 4px auto; → Centraliza horizontalmente.*/
+
+  
+  #switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+  
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+
+  /*
+    O botão do switch tem:
+    Tamanho: 32x32px.
+    border-radius: 50%; → Formato redondo.
+    position: absolute; → Permite movimentá-lo livremente dentro do #switch.
+    top: 50%; transform: translateY(-50%); → Centraliza verticalmente.
+  */
+
+  
+  .light #switch button {
+    right: 0;
+    left: initial;
+  }
+  
+  #switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+  }
+  
+  /* links */
+  ul {
+    list-style: none;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+    padding: 24px 0;
+  }
+
+
+  /*
+    list-style: none; → Remove os marcadores da lista.
+    display: flex; → Deixa os links organizados verticalmente.
+    gap: 16px; → Adiciona espaçamento entre os links.
+  
+  */
+  
+  ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 16px 24px;
+  
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+  
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  
+    text-decoration: none;
+    font-weight: 500;
+  
+    transition: background 0.2s;
+  }
+  
+  /*
+  Cria botões com aparência suave, bordas arredondadas e efeito de transição.
+  */ 
+
+  /* pseudo-selector */
+  ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+  }
+
+  /*hover → Altera a aparência ao passar o mouse, aumentando a 
+  espessura da borda e mudando a cor de fundo.*/
+  
+  /* social links */
+  #social-links {
+    display: flex;
+    justify-content: center;
+  
+    padding: 24px 0;
+  
+    font-size: 24px;
+  }
+
+  /*Centraliza os ícones sociais.*/
+  
+  #social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  
+    transition: background 0.2s;
+    border-radius: 50%;
+  }
+  
+  #social-links a:hover {
+    background: var(--highlight-color);
+  }
+
+  /*Aplica um efeito de destaque ao passar o mouse nos links sociais.*/
+  
+  footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /*Define o espaçamento interno do rodapé e centraliza o texto.
+*/

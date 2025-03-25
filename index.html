@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Pré-conexão para melhorar o carregamento das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importa a fonte "Inter" com pesos 400 e 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    />
+
+    <!-- Configuração de codificação de caracteres para acentuação correta -->
+    <meta charset="UTF-8" />
+
+    <!-- Compatibilidade com versões mais recentes do Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Permite que a página se adapte a diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ZiLinks</title>
+
+    <!-- Importa o arquivo de estilo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- Perfil com imagem e nome de usuário -->
+      <div id="profile">
+        <img
+          src="./assets/avatar.png"
+          alt="Foto de Mayk Brito sorrindo, usando óculos e camisa preta, barba e fundo amarelo."
+        />
+        <h1>Senhorita zi </h1>
+        <p>@senhoritaz.i</p>
+      </div>
+
+      <!-- Botão para alternar entre modo claro e escuro -->
+      <div id="switch" onclick="toggleMode()">
+        <button></button> <!-- Botão deslizante -->
+        <span></span>     <!-- Fundo da faixa do switch -->
+      </div>
+
+      <!-- Lista de links de navegação -->
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/@senhoritaz.i" target="_blank"> My Channel</a>
+        </li>
+        <li>
+          <a href="https://www.wattpad.com/user/senhoritazi" target="_blank">My Books</a>
+        </li>
+        <li>
+          <a href="https://www.threads.net/@senhoritaz.i?xmt=AQGz6tV2dA5xpxclytQnu97Tj9-Bj26y3Sqc6gRtoxvZ9k4"target="_blank">Threads</a>
+        </li>
+        <li>
+          <a href="https://privacy.com.br/Profile/senhoritazi"target="_blank">Exclusive Content</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/senhoritaz.i/" target="_blank">My Diary - EM BREVE🖤</a>
+        </li>
+        <li>
+          <a href="https://wise.com/invite/ahpc/lailas438" target="_blank">Wise</a>
+        </li>
+        <li>
+          <a href="https://matias.me/nsfw/" target="_blank">Click  For a Surprise</a>
+        </li>
+
+      </ul>
+
+      <!-- Links para redes sociais -->
+      <div id="social-links">
+        <a href="https://github.com/Lailaamorim" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://instagram.com/senhoritaz.i" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+     
+      </div>
+
+      <!-- Rodapé com créditos -->
+      <footer>
+        Feito com ♥ pela <a href="https://github.com/Lailaamorim">Zi</a>
+      </footer>
+    </div>
+
+    <!-- Biblioteca Ionicons para ícones das redes sociais -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Versão alternativa para navegadores antigos -->
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Script com a função toggleMode() para alternar modo claro/escuro -->
+    <script src="./script.js"></script>
+  </body>
+</html>
