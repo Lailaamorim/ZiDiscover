@@ -9,7 +9,7 @@ Além de ser uma solução prática, ele também faz parte do meu processo de ap
           src="./assets/imgreadme.pnj.png" /></a>
 </p>
 
-[🔗CLIQUE AQUI PARA ACESSAR😍](https://lailaamorim.github.io/DISCOVER-Zi/)
+[🔗CLIQUE AQUI PARA ACESSAR😍](https://lailaamorim.github.io/ZiDiscover/)
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
